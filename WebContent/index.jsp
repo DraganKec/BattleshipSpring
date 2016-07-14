@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<form method="POST" action="battleship.html">
+	<form method="POST" action="battleship">
 		<input type="submit" value="Generate">
 		<hr>
 		<div class="container">

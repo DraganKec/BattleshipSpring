@@ -1,6 +1,6 @@
 package org.battleship;
 
 public class BattleshipHelp {
-	public static String emptyField = "1";
-	public static String ship = "6";
+	public static final String emptyField = "1";
+	public static final String ship = "6";
 }

@@ -4,17 +4,20 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
-  <servlet>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <servlet>
         <servlet-name>battleship</servlet-name>
         <servlet-class>
-            org.springframework.web.servlet.DispatcherServlet
+            org.battleship.controller.BattleshipServlet
         </servlet-class>
-        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>battleship</servlet-name>
-        <url-pattern>/battleship.html</url-pattern>
+        <url-pattern>/battleship</url-pattern>
     </servlet-mapping>
   
   
