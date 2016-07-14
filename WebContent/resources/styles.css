@@ -1,0 +1,27 @@
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.container>div {
+	text-align: center;
+}
+
+.first {
+	width: 20px;
+}
+
+.black {
+	width: 20px;
+	border-style: solid;
+	border-width: 0.5px;
+	background-color: black;
+}
+
+.white {
+	width: 20px;
+	color: white;
+	border-style: solid;
+	border-color: black;
+	border-width: 0.5px;
+}
