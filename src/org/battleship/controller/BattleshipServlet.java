@@ -16,29 +16,30 @@ import java.io.IOException;
 @WebServlet(name = "BattleshipServlet")
 public class BattleshipServlet extends HttpServlet {
 
-    @Autowired
-    BattleshipService battleshipService;
+	@Autowired
+	BattleshipService battleshipService;
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+	public void init(ServletConfig config) throws ServletException {
+		super.init(config);
+		SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
+	}
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        battleshipService.fillMatrix();
-        battleshipService.addShips(4, 1);
-        battleshipService.addShips(3, 2);
-        battleshipService.addShips(2, 3);
-        battleshipService.addShips(1, 4);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		battleshipService.fillMatrix();
+		battleshipService.addShips(4, 1);
+		battleshipService.addShips(3, 2);
+		battleshipService.addShips(2, 3);
+		battleshipService.addShips(1, 4);
 
-        request.setAttribute("battleshipMap", battleshipService.getBattleshipMap());
+		request.setAttribute("battleshipMap", battleshipService.getBattleshipMap());
 
-        RequestDispatcher view = request.getRequestDispatcher("index.jsp");
-        view.forward(request, response);
-    }
+		RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+		view.forward(request, response);
+	}
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-    }
+	}
 }

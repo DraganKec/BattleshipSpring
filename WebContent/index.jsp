@@ -28,5 +28,8 @@
 		</div>
 
 	</form>
+	<form method="POST" action="sudoku">
+		<input type="submit" value="Sudoku">
+	</form>
 </body>
 </html>

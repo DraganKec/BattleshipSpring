@@ -2,7 +2,7 @@ package org.battleship.service;
 
 import org.springframework.stereotype.Service;
 
-@Service("battleshipService")
+@Service
 public interface BattleshipService {	
 
 	void addShip(int shipSize);

@@ -1,17 +1,15 @@
 package org.battleship.service;
 
-import java.util.Random;
-
 import org.battleship.BattleshipHelp;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BattleshipServiceImpl implements BattleshipService {
-	
+
 	private final String[][] battleshipMap = new String[10][10];
 
 	private int orientation;
-	
+
 	public String[][] getBattleshipMap() {
 		return battleshipMap;
 	}
@@ -22,10 +20,10 @@ public class BattleshipServiceImpl implements BattleshipService {
 
 		boolean isPass = true;
 
-		orientation = getRandomNumber(2);
+		orientation = BattleshipHelp.getRandomNumber(2);
 		do {
-			int x = getRandomNumber(maxRandomNumber);
-			int y = getRandomNumber(maxRandomNumber);
+			int x = BattleshipHelp.getRandomNumber(maxRandomNumber);
+			int y = BattleshipHelp.getRandomNumber(maxRandomNumber);
 
 			if (checkIsEmpty(shipSize, x, y)) {
 				for (int i = 0; i < shipSize; i++) {
@@ -100,10 +98,6 @@ public class BattleshipServiceImpl implements BattleshipService {
 			x++;
 		}
 		return true;
-	}
-
-	private int getRandomNumber(int maxNumber) {
-		return new Random().nextInt(maxNumber);
 	}
 
 	@Override
