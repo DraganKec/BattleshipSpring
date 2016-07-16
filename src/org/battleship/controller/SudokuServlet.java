@@ -14,7 +14,7 @@ import org.kecmen.sudoku.SudokuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
-//@WebServlet("/SudokuServlet")
+@WebServlet("/sudoku")
 public class SudokuServlet extends HttpServlet {
 	
 	@Autowired

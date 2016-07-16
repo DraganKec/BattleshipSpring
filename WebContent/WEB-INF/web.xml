@@ -21,14 +21,5 @@
 		<servlet-name>battleship</servlet-name>
 		<url-pattern>/battleship</url-pattern>
 	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>sudoku</servlet-name>
-		<servlet-class>org.battleship.controller.SudokuServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>sudoku</servlet-name>
-		<url-pattern>/sudoku</url-pattern>
-	</servlet-mapping>
-
+	
 </web-app>
