@@ -10,13 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.kecmen.sudoku.SudokuService;
+import org.battleship.sudoku.SudokuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 @WebServlet("/sudoku")
 public class SudokuServlet extends HttpServlet {
-	
+
 	@Autowired
 	SudokuService sudokuService;
 
@@ -26,8 +26,8 @@ public class SudokuServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {		
-		
+			throws ServletException, IOException {
+
 		request.setAttribute("sudokumap", sudokuService.generateSudoku());
 
 		RequestDispatcher view = request.getRequestDispatcher("sudoku.jsp");

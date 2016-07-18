@@ -1,4 +1,4 @@
-package org.kecmen.sudoku;
+package org.battleship.sudoku;
 
 import java.util.ArrayList;
 import java.util.Collections;

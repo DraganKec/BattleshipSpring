@@ -10,6 +10,7 @@
 
 	<context:annotation-config/>
 	<context:component-scan base-package="org.battleship.service"/>
-	<context:component-scan base-package="org.kecmen.sudoku"/>
+	<context:component-scan base-package="org.battleship.sudoku"/>
+	
 
 </beans>
